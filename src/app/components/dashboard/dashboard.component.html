@@ -3,7 +3,9 @@
 </div>
 
 <div class="container">
-<app-container></app-container>
+    <h1>{{dataToChild}}</h1>
+<app-container [dataFromParent]="dataToChild"> </app-container>
+
 </div>
 
 <div class="footer">
