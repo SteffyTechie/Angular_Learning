@@ -1,5 +1,6 @@
 <div class="header">
-    <app-header></app-header>
+    <h1>{{dataToParent}}</h1>
+    <app-header (value)="getData($event)"></app-header>
 </div>
 
 <div class="container">
