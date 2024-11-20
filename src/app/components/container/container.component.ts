@@ -10,6 +10,7 @@ import { Component, Input } from '@angular/core';
 export class ContainerComponent {
   @Input()
   public dataFromParent : string =""
+  public msg : string = "message in child"
   constructor(){
 
   }
