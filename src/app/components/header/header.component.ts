@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { EventService } from '../../service/event.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent {
 @Output()
   public value = new EventEmitter<string>();
 
-  constructor(){
+  constructor(private eventService : EventService){
 
   }
   ngOnInit(){
@@ -20,6 +21,7 @@ export class HeaderComponent {
   passData(){
     console.log("button clicked")
     this.value.emit("event binding")
+    this.eventService.key.emit("data to service")
     
   }
 

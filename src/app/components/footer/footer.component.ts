@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventService } from '../../service/event.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+public serviceVar : string = ""
 
+constructor(private eventService : EventService){
+
+}
+ngOnInit(){
+  this.eventService.key.subscribe((i)=>{console.log(i)
+    this.serviceVar = i
+  })
+}
 }
